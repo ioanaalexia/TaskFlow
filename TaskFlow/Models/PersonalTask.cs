@@ -3,14 +3,14 @@
 public sealed class PersonalTask : TaskItem
 {   public string? Person { get; set; }
 
-    public PersonalTask(string title, string description, string? person = null) : base(title, description)
+    public PersonalTask(string title, string description, string? person, TaskPriority priority, TaskStatus status, DueDate dueDate) : base(title, description, priority, status, dueDate)
     {
         Person = person;
     }
 
-    public override string Details()
+    public override string ToString()
     {
         var person = string.IsNullOrWhiteSpace(Person) ? "self" : Person;
-        return base.Details() + $"| For: {person}";
+        return base.ToString() + $"| For: {person}";
     }
 }
