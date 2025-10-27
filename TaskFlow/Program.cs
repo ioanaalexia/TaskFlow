@@ -5,8 +5,6 @@ var project = new Project("Demo Project");
 
 project.AddTask(new PersonalTask("Buy groceries", "Egss, Milk, Flour", "Alexia", TaskPriority.Low, TaskFlow.Models.TaskStatus.Completed, new DueDate(DateTime.Parse("2025-11-05"))));
 project.AddTask(new WorkTask("Work on project", "Research about something", "Razvan", TaskPriority.High, TaskFlow.Models.TaskStatus.InProgress,  new DueDate(DateTime.Parse("2025-10-28"))));
-IReadOnlyList<TaskItem> test = project.Filter(TaskFlow.Models.TaskStatus.Completed, null);
-Console.WriteLine("DEBUG: New count = " + test.Count);
 
 while (true)
 {

@@ -1,0 +1,11 @@
+﻿version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: taskflow:phase1
+    container_name: taskflow_app
+    stdin_open: true
+    tty: true
